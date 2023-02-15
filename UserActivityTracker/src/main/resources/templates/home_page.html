@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-3">
+          
+          <h2>Welcome.</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h3> User Login Detail:</h3>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">SessionId</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">IpAddress</th>
+                    <th scope="col">OSName</th>
+                    <th scope="col">BrowserName</th>
+                    <th scope="col">LogIn</th>
+                    <th scope="col">LogOut</th>
+                    <th scope="col">Time Spent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr th:each = "d: ${data}">
+                    <td th:text = "${d.sessionId}"></td>
+                    <td th:text = "${d.username}"></td>
+                    <td th:text = "${d.location}"></td>
+                    <td th:text = "${d.ipAddress}"></td>
+                    <td th:text = "${d.osName}"></td>
+                    <td th:text = "${d.browserName}"></td>
+                    <td th:text = "${d.logIn}"></td>
+                    <td th:text = "${d.logOut}"></td>
+                    <td th:text = "${d.time}"></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+              <a href="/logout" class="btn btn-lg btn-danger pull-right" role="button">Logout</a>
+          </div>
+          </div>
+
+    </div>
+
+</body>
+</html>
