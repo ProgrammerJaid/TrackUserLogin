@@ -18,3 +18,15 @@
 
 
 ![Screenshot (459)](https://user-images.githubusercontent.com/96864350/219002398-4d668bfe-a1a9-4082-987c-7c296c897041.png)
+
+
+If any problem stating url not configured :
+Use this: 
+        ```<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <scope>provided</scope>
+        </dependency>
+       ```
+        
+Also please provide your database settings as well as change create-drop to update if data needs to be persisted.
